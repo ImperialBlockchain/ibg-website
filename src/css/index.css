@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url(hamburger.css);
+
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+}
+
+@layer components {
+  a.textLink {
+    @apply hover:text-blue-600 underline;
+  }
+}

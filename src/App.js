@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Main from './layouts/Main'; // fallback for lazy pages
+
+const { PUBLIC_URL } = process.env;
+
+const Index = lazy(() => import('./pages/Index'))
+const Team = lazy(() => import('./pages/Team'));
+const Partners = lazy(() => import('./pages/Partners'));
+const Contact = lazy(() => import('./pages/Contact'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter basename={PUBLIC_URL}>
+      <Suspense fallback={<Main />}>
+        <Routes>
+          <Route exact path="/" element={<Index />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/partners" element={<Partners />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} status={404} />
+        </Routes>
+      </Suspense>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,20 @@
+/* Position and sizing of burger button */
+.bm-burger-button {
+  display: none;
+}
+
+.bm-overlay {
+  display: none;
+}
+
+.bm-menu-wrap {
+  background-color: white;
+}
+
+.bm-item {
+  margin-left: 2rem;
+}
+
+.bm-item > li {
+  padding: 0.2rem;
+}
