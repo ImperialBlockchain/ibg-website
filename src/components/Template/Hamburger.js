@@ -24,10 +24,33 @@ const Hamburger = (props) => {
         </ul>
       </nav>
       <Suspense fallback={<></>}>
-        <Menu right isOpen={open}>
+        <Menu
+          stack
+          right
+          noOverlay
+          width={'100%'}
+          isOpen={open}
+          customBurgerIcon={false}
+          customCrossIcon={false}
+          disableAutoFocus
+        >
           <div className='absolute top-16'>
             <ul>
-              {routes.map((l) => (
+              {routes.filter((l) => l.navigation || l.homepage).map((l) => (
+                <li key={l.label}>
+                  <Link to={l.path} onClick={() => setOpen(!open)}>
+                    <h3 className={`${l.index && 'index-li'} hover:text-blue-600 text-xl`}>{l.label}</h3>
+                  </Link>
+                </li>
+              ))}
+              {routes.filter((l) => l.login).map((l) => (
+                <li key={l.label}>
+                  <Link to={l.path} onClick={() => setOpen(!open)}>
+                    <h3 className={`${l.index && 'index-li'} hover:text-blue-600 text-xl`}>{l.label}</h3>
+                  </Link>
+                </li>
+              ))}
+              {routes.filter((l) => l.signup).map((l) => (
                 <li key={l.label}>
                   <Link to={l.path} onClick={() => setOpen(!open)}>
                     <h3 className={`${l.index && 'index-li'} hover:text-blue-600 text-xl`}>{l.label}</h3>
@@ -35,7 +58,7 @@ const Hamburger = (props) => {
                 </li>
               ))}
             </ul>
-            <ContactIcons className='mt-6'/>
+            <ContactIcons className='mt-6' />
           </div>
         </Menu>
       </Suspense>

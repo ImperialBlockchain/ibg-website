@@ -1,15 +1,5 @@
-/* Position and sizing of burger button */
-.bm-burger-button {
-  display: none;
-}
-
-.bm-overlay {
-  display: none;
-}
-
 .bm-menu-wrap {
   background-color: white;
-  width: 100% !important;
 }
 
 .bm-item {
