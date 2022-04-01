@@ -6,6 +6,7 @@ const { PUBLIC_URL } = process.env;
 
 const Index = lazy(() => import('./pages/Index'))
 const Team = lazy(() => import('./pages/Team'));
+const Newsletter = lazy(() => import('./pages/Newsletter'));
 const Partners = lazy(() => import('./pages/Partners'));
 const Contact = lazy(() => import('./pages/Contact'));
 const NotFound = lazy(() => import('./pages/NotFound'));
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Index />} />
           <Route path="/team" element={<Team />} />
+          <Route path="/newsletter" element={<Newsletter />} />
           <Route path="/partners" element={<Partners />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} status={404} />

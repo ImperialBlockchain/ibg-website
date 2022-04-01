@@ -10,7 +10,7 @@ const Hamburger = (props) => {
 
   return (
     <div className={props.className}>
-      <nav className='z-[1200] absolute hover:text-gray-400 hover:bg-gray-100 px-2 py-1 my-1'>
+      <nav className='z-[1200] absolute hover:text-gray-400 hover:bg-gray-100 px-2 py-1 my-2'>
         <ul>
           {open ? (
             <li className="menu close-menu">
@@ -30,7 +30,7 @@ const Hamburger = (props) => {
               {routes.map((l) => (
                 <li key={l.label}>
                   <Link to={l.path} onClick={() => setOpen(!open)}>
-                    <h3 className={`${l.index && 'index-li'} hover:text-blue-600`}>{l.label}</h3>
+                    <h3 className={`${l.index && 'index-li'} hover:text-blue-600 text-xl`}>{l.label}</h3>
                   </Link>
                 </li>
               ))}

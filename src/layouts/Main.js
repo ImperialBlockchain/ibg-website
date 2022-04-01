@@ -35,7 +35,7 @@ const Main = (props) => (
     </Helmet>
     <div>
       <Navigation />
-      <div className='px-4 lg:px-20'>
+      <div>
         {props.children}
       </div>
       {props.fullPage ? null : <SideBar />}

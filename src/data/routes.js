@@ -9,6 +9,10 @@ const routes = [
       path: '/team',
     },
     {
+      label: 'Newsletter',
+      path: '/newsletter',
+    },
+    {
       label: 'Partners',
       path: '/partners',
     },
