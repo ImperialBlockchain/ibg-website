@@ -8,7 +8,7 @@ import routes from '../../data/routes';
 const Navigation = () => (
   <header className='w-full'>
     <div className='flex flex-wrap px-4 lg:px-20 mx-auto my-2 flex-row justify-between'>
-      <h1 className='w-2/5 my-3 text-2xl'>
+      <h1 className='w-3/5 my-3 text-2xl'>
         {routes.filter((l) => l.homepage).map((l) => (
           <Link key={l.label} to={l.path}>{l.label}</Link>
         ))}

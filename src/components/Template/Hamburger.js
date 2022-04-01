@@ -2,6 +2,9 @@ import React, { Suspense, lazy, useState } from 'react';
 import { Link } from 'react-router-dom';
 import routes from '../../data/routes';
 import ContactIcons from '../Contact/ContactIcons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBarChart } from '@fortawesome/free-regular-svg-icons/faBarChart';
+import { faTimesRectangle } from '@fortawesome/free-regular-svg-icons/faTimesRectangle';
 
 const Menu = lazy(() => import('react-burger-menu/lib/menus/slide'));
 
@@ -14,11 +17,11 @@ const Hamburger = (props) => {
         <ul>
           {open ? (
             <li className="menu close-menu">
-              <div onClick={() => setOpen(!open)} className="menu-hover">&#10005;</div>
+              <div onClick={() => setOpen(!open)} className="menu-hover"><FontAwesomeIcon icon={faTimesRectangle} /></div>
             </li>
           ) : (
             <li className="menu open-menu">
-              <div onClick={() => setOpen(!open)} className="menu-hover">&#9776;</div>
+              <div onClick={() => setOpen(!open)} className="menu-hover"><FontAwesomeIcon icon={faBarChart} /></div>
             </li>
           )}
         </ul>
