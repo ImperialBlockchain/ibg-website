@@ -6,9 +6,9 @@ import routes from '../../data/routes';
 
 // Websites Navbar, displays routes defined in 'src/data/routes'
 const Navigation = () => (
-  <header className='w-full'>
+  <header className='w-full from-gray-100 to-gray-100/10 bg-gradient-to-r'>
     <div className='flex flex-wrap px-4 lg:px-20 mx-auto flex-row justify-between'>
-      <h1 className='w-3/5 my-4 text-2xl'>
+      <h1 className='w-3/5 my-4 text-2xl font-bold'>
         {routes.filter((l) => l.homepage).map((l) => (
           <Link key={l.label} to={l.path}>{l.label}</Link>
         ))}
@@ -26,7 +26,7 @@ const Navigation = () => (
             </li>
           ))}
           {routes.filter((l) => l.signup).map((l) => (
-            <li key={l.label} className='px-2 py-1 text-white bg-yellow-500 hover:bg-yellow-300'>
+            <li key={l.label} className='px-2 py-1 text-white bg-rose-600 hover:bg-yellow-500'>
               <Link to={l.path}>{l.label}</Link>
             </li>
           ))}

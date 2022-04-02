@@ -7,8 +7,8 @@ const Index = () => (
     description={'Blockchain-focused research/consulting/technology group. Analyze, research, create and Inspire.'}
   >
     <section className='h-[calc(100vh_-_5rem)]'>
-      <div className='-z-10 absolute w-full sm:w-1/2 right-0 top-0'>
-        <video loop="true" muted="true" playsinline="true" autoplay="true" poster=''>
+      <div className='-z-10 blur-0 absolute w-full sm:w-1/2 right-0 top-0'>
+        <video loop={true} muted={true} playsInline={true} autoPlay={true} poster=''>
           <source src={heroVideo} type="video/mp4" />
         </video>
         {/*<!img alt='hero' className='bg-gray-400 w-full h-full' />*/}
@@ -18,6 +18,9 @@ const Index = () => (
           <h1 className='text-6xl sm:text-7xl break all'>Welcome to Imperial Blockchain Society's Website</h1>
         </div>
       </div>
+    </section>
+    <section className='h-screen'>
+
     </section>
   </Main>
 );

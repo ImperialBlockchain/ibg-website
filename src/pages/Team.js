@@ -12,7 +12,7 @@ const Team = (props) => (
       <h1 className='text-4xl mb-4'>Meet the commitee!</h1>
       <ul className={`${props.className} grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4`}>
         {team.map((s) => (
-          <li key={s.label}>
+          <li key={s.name}>
             <Card
               name={s.name}
               imageLink={s.imageLink}
