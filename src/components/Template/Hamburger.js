@@ -14,7 +14,7 @@ const Hamburger = (props) => {
   return (
     <div className={props.className}>
       {/*z-index is set to the value to be over the navigation*/} 
-      <nav className='z-[1200] absolute text-yellow-500 hover:bg-yellow-500 hover:text-white px-2 pt-1 my-3 rounded-full border-2 border-yellow-500'>
+      <nav className='z-[1200] absolute text-yellow-500 p-2 my-2'>
         <ul>
           {open ? (
             <li className="menu close-menu">
