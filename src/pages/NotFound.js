@@ -6,7 +6,7 @@ const NotFound = () => (
   <Main
     description={'Not found'}
   >
-    <section className='min-h-screen flex justify-center items-center'>
+    <section className='min-h-[calc(100vh_-_8rem)] flex justify-center items-center'>
       <div className='w-96 h-64 p-6'>
         <h1 className='text-4xl'>404</h1>
         <h2>Error - Page Not Found</h2>

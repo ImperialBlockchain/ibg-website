@@ -134,8 +134,35 @@
   html {
     font-family: "soleto", sans-serif;
   }
-  p {
+  p,
+  .markdown {
     font-family: "noto-sans", sans-serif;
+  }
+  .markdown > h1,
+  .markdown > h2,
+  .markdown > h3,
+  .markdown > h4,
+  .markdown > h5,
+  .markdown > h6 {
+    @apply font-bold
+  }
+  .markdown > h1 {
+    @apply text-xl;
+  }
+  .markdown > h2 {
+    @apply text-lg;
+  }
+  .markdown > p a {
+    @apply hover:text-blue-600 underline;
+  }
+  .markdown > p {
+    @apply mb-2;
+  }
+  .markdown > ol {
+    @apply list-decimal list-inside;
+  }
+  .markdown > ul {
+    @apply list-disc list-inside;
   }
 }
 

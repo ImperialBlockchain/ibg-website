@@ -8,8 +8,8 @@ const Team = (props) => (
   <Main
     description={'Team introduction page'}
   >
-    <div className='mx-auto px-4 lg:px-20 lg:max-w-screen-lg'>
-      <h1 className='text-4xl mb-4'>Meet the commitee!</h1>
+    <section className='mx-auto px-4 lg:px-20 lg:max-w-screen-lg my-2'>
+      <h1 className='text-4xl my-4'>Meet the commitee!</h1>
       <ul className={`${props.className} grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4`}>
         {team.map((s) => (
           <li key={s.name}>
@@ -22,7 +22,7 @@ const Team = (props) => (
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   </Main>
 );
 
