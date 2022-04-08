@@ -9,6 +9,7 @@ const Team = lazy(() => import('./pages/Team'));
 const Newsletter = lazy(() => import('./pages/Newsletter'));
 const Partners = lazy(() => import('./pages/Partners'));
 const Contact = lazy(() => import('./pages/Contact'));
+const Signup = lazy(() => import('./pages/Signup'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/newsletter" element={<Newsletter />} />
           <Route path="/partners" element={<Partners />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/signup" element={<Signup />} />
           <Route path="*" element={<NotFound />} status={404} />
         </Routes>
       </Suspense>

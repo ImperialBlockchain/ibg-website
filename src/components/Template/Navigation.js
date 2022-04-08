@@ -16,18 +16,30 @@ const Navigation = () => (
       <nav className='w-2/5 sm:my-3 justify-end flex'>
         <ul className='sm:flex items-center hidden'>
           {routes.filter((l) => l.navigation).map((l) => (
-            <li key={l.label} className='px-2 py-1 hover:text-blue-600'>
-              <Link to={l.path}>{l.label}</Link>
+            <li key={l.label}>
+              <Link to={l.path}>
+                <div className='px-2 py-1 hover:text-blue-600'>
+                  {l.label}
+                </div>
+              </Link>
             </li>
           ))}
           {routes.filter((l) => l.login).map((l) => (
-            <li key={l.label} className='mr-2 px-2 py-1 text-yellow-500 hover:text-blue-600'>
-              <Link to={l.path}>{l.label}</Link>
+            <li key={l.label}>
+              <Link to={l.path}>
+                <div className='mr-2 px-2 py-1 text-yellow-500 hover:text-blue-600'>
+                  {l.label}
+                </div>
+              </Link>
             </li>
           ))}
           {routes.filter((l) => l.signup).map((l) => (
-            <li key={l.label} className='px-2 py-1 text-white bg-rose-600 hover:bg-yellow-500'>
-              <Link to={l.path}>{l.label}</Link>
+            <li key={l.label}>
+              <Link to={l.path}>
+                <div className='px-2 py-1 text-white bg-rose-600 hover:bg-yellow-500'>
+                  {l.label}
+                </div>
+              </Link>
             </li>
           ))}
         </ul>
