@@ -18,7 +18,7 @@ const Navigation = () => (
           {routes.filter((l) => l.navigation).map((l) => (
             <li key={l.label}>
               <Link to={l.path}>
-                <div className='px-2 py-1 hover:text-blue-600'>
+                <div className='px-2 py-1 hover:text-blue-600 hover:underline'>
                   {l.label}
                 </div>
               </Link>
@@ -27,7 +27,7 @@ const Navigation = () => (
           {routes.filter((l) => l.login).map((l) => (
             <li key={l.label}>
               <Link to={l.path}>
-                <div className='mr-2 px-2 py-1 text-yellow-500 hover:text-blue-600'>
+                <div className='mr-2 px-2 py-1 text-yellow-500 hover:text-blue-600 hover:underline'>
                   {l.label}
                 </div>
               </Link>

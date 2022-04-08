@@ -7,8 +7,8 @@ const Index = () => (
     description={'Blockchain-focused research/consulting/technology group. Analyze, research, create and Inspire.'}
   >
     <section className='h-[calc(100vh_-_5rem)]'>
-      <div className='-z-10 blur-[2px] absolute w-full sm:w-1/2 right-0 top-0'>
-        <video loop={true} muted={true} playsInline={true} autoPlay={true} poster=''>
+      <div className='-z-10 absolute w-full sm:w-1/2 right-0 top-0'>
+        <video className='absolute right-0 top-0' loop={true} muted={true} playsInline={true} autoPlay={true} poster=''>
           <source src={heroVideo} type="video/mp4" />
         </video>
         {/*<!img alt='hero' className='bg-gray-400 w-full h-full' />*/}
