@@ -12,7 +12,7 @@ const NotFound = () => (
         <h2>Error - Page Not Found</h2>
         <hr />
         <p>Please check the URL.</p>
-        <p>Otherwise, <Link to='/' className='textLink'>click here</Link> to be returned to the homepage</p>
+        <p>Otherwise, <Link to='/' className='text-link'>click here</Link> to be returned to the homepage</p>
       </div>
     </section>
   </Main>

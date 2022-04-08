@@ -140,7 +140,13 @@
 }
 
 @layer components {
-  a.textLink {
+  a.text-link {
     @apply hover:text-blue-600 underline;
+  }
+  input.contact-form {
+    @apply border-b-2 border-black;
+  }
+  .primary-button {
+    @apply text-white bg-rose-600 hover:hover:bg-yellow-500;
   }
 }
