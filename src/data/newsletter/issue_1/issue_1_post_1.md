@@ -1,4 +1,6 @@
-# Financials Sector
+# Issue #1
+
+## Financials Sector
 
 **Insurance stocks** have been outperforming the broader market since the beginning of the year. In the week ending on Feb. 4, S&P 500 Insurance index rose 3.72% to 565.68, while the S&P 500 climbed 1.55% to 4,500.53.
 

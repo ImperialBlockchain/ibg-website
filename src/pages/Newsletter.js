@@ -9,7 +9,6 @@ const Newsletter = () => {
   const [markdown, setMarkdown] = useState('');
 
   useEffect(() => {
-    console.log(issue_1_authors)
     fetch(markdownFile)
       .then(res => res.text())
       .then(text => setMarkdown(text))

@@ -167,8 +167,14 @@
   .markdown > ol {
     @apply list-decimal list-inside;
   }
+  .markdown > ol > li > p {
+    @apply inline;
+  }
   .markdown > .footnotes > ol {
     @apply list-decimal list-inside;
+  }
+  .markdown > .footnotes > ol > li > p {
+    @apply inline;
   }
   .markdown > ul {
     @apply list-disc list-inside;
