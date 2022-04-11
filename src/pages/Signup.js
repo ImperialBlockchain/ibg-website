@@ -53,7 +53,7 @@ const Signup = () => {
                 <label htmlFor='newsletterSub'><p>Subscribe to IBG weekly newsletter</p></label>
               </div>
               <div className='w-full'>
-                <input type="submit" className='primary-button w-48 p-1 mx-auto block' />
+                <input value='Submit' type="submit" className='primary-button w-48 p-1 mx-auto block' />
               </div>
             </form>
           </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { useForm } from 'react-hook-form';
 import Main from '../layouts/Main';
 import raw from 'raw.macro';
@@ -23,7 +24,11 @@ const Contact = () => {
         <h1 className='text-4xl mt-4'>Contact Us!</h1>
         <div className='flex flex-col sm:flex-row divide-y-2 sm:divide-y-0 divide-gray-300'>
           <div className='w-full sm:w-1/2 py-2'>
-            <ReactMarkdown children={markdown} escapeHtml={false} className='markdown' />
+            <ReactMarkdown
+              children={markdown}
+              escapeHtml={false}
+              remarkPlugins={[remarkGfm]}
+              className='markdown' />
           </div>
           <div className='w-full sm:w-1/2 py-2'>
             <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col'>
@@ -51,7 +56,7 @@ const Contact = () => {
                 {errors.message && <p className='italic text-red-500'>Enter a message</p>}
               </div>
               <div className='w-full'>
-                <input type="submit" className='primary-button w-48 p-1 mx-auto block' />
+                <input value='Submit' type="submit" className='primary-button w-48 p-1 mx-auto block' />
               </div>
             </form>
           </div>

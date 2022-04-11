@@ -147,22 +147,47 @@
     @apply font-bold;
   }
   .markdown > h1 {
-    @apply text-xl;
+    @apply text-4xl font-normal mt-4;
+    font-family: "soleto", sans-serif;
   }
   .markdown > h2 {
+    @apply text-xl;
+  }
+  .markdown > h3 {
     @apply text-lg;
   }
   .markdown > p a {
     @apply hover:text-blue-600 underline;
   }
-  .markdown > p {
+  .markdown > p,
+  .markdown > h1,
+  .markdown > h2 {
     @apply mb-2;
   }
   .markdown > ol {
     @apply list-decimal list-inside;
   }
+  .markdown > .footnotes > ol {
+    @apply list-decimal list-inside;
+  }
   .markdown > ul {
     @apply list-disc list-inside;
+  }
+  .markdown sup > a {
+    @apply text-blue-600 no-underline;
+  }
+  .markdown img {
+    @apply max-w-full;
+  }
+  @media screen(sm) {
+    .markdown img {
+      @apply max-w-[75%];
+    }
+  }
+  @media screen(md) {
+    .markdown img {
+      @apply max-w-[50%];
+    }
   }
 }
 
