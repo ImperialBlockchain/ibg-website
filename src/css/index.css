@@ -186,16 +186,16 @@
     @apply text-blue-600 no-underline;
   }
   .markdown img {
-    @apply max-w-full;
+    @apply w-full;
   }
   @media screen(sm) {
     .markdown img {
-      @apply max-w-[75%];
+      @apply w-3/4;
     }
   }
   @media screen(md) {
     .markdown img {
-      @apply max-w-[50%];
+      @apply w-1/2;
     }
   }
 }

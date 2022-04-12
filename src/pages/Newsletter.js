@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import Main from '../layouts/Main';
-import markdownFile from '../data/newsletter/issue_1/issue_1_post_1.md';
+import markdownFile from '../data/newsletter/issue_1/issue_1_post_2.md';
 import issue_1_authors from '../data/newsletter/issue_1/issue_1_authors';
 
 const Newsletter = () => {
@@ -24,7 +24,7 @@ const Newsletter = () => {
           escapeHtml={false}
           className='markdown' />
         <br />
-        <p>
+        {/*<p>
           <h2 className='text-xl font-bold'>Writers</h2>
           {issue_1_authors.map((s) => (
             <div key={s.name}>
@@ -34,7 +34,7 @@ const Newsletter = () => {
               <br />
             </div>
           ))}
-        </p>
+          </p>*/}
       </div>
     </Main>
   );
