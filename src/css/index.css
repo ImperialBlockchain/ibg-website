@@ -138,6 +138,9 @@
   .markdown {
     font-family: "noto-sans", sans-serif;
   }
+  .markdown {
+    @apply break-words;
+  }
   .markdown > h1,
   .markdown > h2,
   .markdown > h3,

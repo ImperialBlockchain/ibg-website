@@ -15,7 +15,7 @@ const Index = () => (
       </div>
       <div className='h-full grid grid-cols-12 grid-rows-1 content-center px-4 lg:px-20'>
         <div className='col-start-1 col-end-13 sm:col-end-7 row-start-1 row-end-2 flex items-center'>
-          <h1 className='text-6xl sm:text-7xl break all'>Welcome to Imperial Blockchain Society's Website</h1>
+          <h1 className='text-6xl sm:text-7xl break all'>Welcome to Imperial Blockchain Group's Website</h1>
         </div>
       </div>
     </section>
