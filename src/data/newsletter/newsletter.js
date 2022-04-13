@@ -1,12 +1,19 @@
 const newsletter = [
     {
         issue: 1,
-        data: '2022-02-07',
-        authors: '/issue_1_authors.js',
-        posts: [
-            '/issue_1/issue_1_post_1.md',
-            '/issue_1/issue_1_post_2.md',
-            '/issue_1/issue_1_post_3.md',
-        ]
+        date: '2022-02-07',
+        path: '/issue_1/issue_1.md',
+    },
+    {
+        issue: 2,
+        date: '2022-02-14',
+        path: '/issue_2/issue_2.md',
+    },
+    {
+        issue: 3,
+        date: '2022-02-21',
+        path: '/issue_3/issue_3.md',
     }
-]
+];
+
+export default newsletter;

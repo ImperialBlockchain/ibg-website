@@ -20,6 +20,7 @@ function App() {
           <Route exact path="/" element={<Index />} />
           <Route path="/team" element={<Team />} />
           <Route path="/newsletter" element={<Newsletter />} />
+          <Route path="/newsletter/:id" element={<Newsletter />} />
           <Route path="/partners" element={<Partners />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/signup" element={<Signup />} />
