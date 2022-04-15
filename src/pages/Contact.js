@@ -20,7 +20,7 @@ const Contact = () => {
       title="Contact"
       description="Contact Imperial Blockchain Group via the contact form"
     >
-      <section className='min-h-[calc(100vh_-_10rem)] px-4 lg:px-20 my-2'>
+      <section className='min-h-[calc(100vh_-_10rem)] px-4 lg:px-20 py-2'>
         <h1 className='text-4xl mt-4'>Contact Us!</h1>
         <div className='flex flex-col sm:flex-row divide-y-2 sm:divide-y-0 divide-gray-300'>
           <div className='w-full sm:w-1/2 py-2'>

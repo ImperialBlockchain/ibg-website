@@ -4,7 +4,8 @@ import Main from '../layouts/Main';
 
 const Index = () => (
   <Main
-    description={'Blockchain-focused research/consulting/technology group. Analyze, research, create and Inspire.'}
+    title="Home"
+    description="Blockchain-focused research/consulting/technology group. Analyze, research, create and Inspire."
   >
     <section className='h-[calc(100vh_-_5rem)]'>
       <div className='-z-10 absolute w-full sm:w-1/2 right-0 top-0'>

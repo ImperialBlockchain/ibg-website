@@ -5,15 +5,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import data from '../../data/contact-icons';
 
 const ContactIcons = (props) => (
-  <ul className={`${props.className} flex`}>
+  <div className={`${props.className} flex`}>
     {data.map((s) => (
-      <li key={s.label}>
-        <a className='pr-2 mr-2 text-gray-400 hover:text-blue-900' href={s.link}>
-          <FontAwesomeIcon icon={s.icon} />
-        </a>
-      </li>
+      <a className='first:ml-0 first:pl-0 px-2 text-gray-400 hover:text-blue-900' key={s.label} href={s.link}>
+        <FontAwesomeIcon icon={s.icon} />
+      </a>
     ))}
-  </ul>
+  </div>
 );
 
 export default ContactIcons;

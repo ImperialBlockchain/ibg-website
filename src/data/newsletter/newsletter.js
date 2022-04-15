@@ -13,7 +13,7 @@ const newsletter = [
         issue: 3,
         date: '2022-02-21',
         path: '/issue_3/issue_3.md',
-    }
+    },
 ];
 
 export default newsletter;

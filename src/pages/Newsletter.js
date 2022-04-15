@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useLocation } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import Main from '../layouts/Main';
 import newsletter from '../data/newsletter/newsletter';
 
 const Newsletter = () => {
-  const [markdown, setMarkdown] = useState('');
+  const [markdown, setMarkdown] = useState('Loading...');
   const id = useParams().id || newsletter.length;
+  const { pathname } = useLocation();
 
   useEffect(() => {
     // check if issue exists in newsletter array
@@ -24,11 +25,16 @@ const Newsletter = () => {
         .catch(err => console.log(err));
   }, [id]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <Main
-      description={'Page with all previous issues of the weekly newsletter'}
+      title="Newsletter"
+      description="Page with all previous issues of the weekly newsletter"
     >
-      <div className='px-4 lg:px-20 my-2'>
+      <div className='px-4 lg:px-20 py-2'>
         <ReactMarkdown
           children={markdown}
           remarkPlugins={[remarkGfm]}
@@ -37,11 +43,13 @@ const Newsletter = () => {
         <br />
         <p className='font-bold'>All issues</p>
         <div className='flex'>
-          {newsletter.map((s)=>(
-            <Link className='px-4 py-2 bg-yellow-100 hover:bg-yellow-500 hover:text-white' to={`/newsletter/${s.issue}`}><p>{s.issue}</p></Link>
+          {newsletter.map((s) => (
+            s.issue === parseInt(id)
+              ? <Link className='px-4 py-2 font-bold bg-yellow-300 hover:bg-yellow-500 hover:text-white' key={s.issue} to={`/newsletter/${s.issue}`}><p>{s.issue}</p></Link>
+              : <Link className='px-4 py-2 bg-yellow-100 hover:bg-yellow-500 hover:text-white' to={`/newsletter/${s.issue}`}><p>{s.issue}</p></Link>
           ))}
         </div>
-        <div>
+        <div className='flex-wrap'>
           {id > 1 && <Link to={`/newsletter/${id - 1}`}>
             <p className='py-1 text-blue-500 hover:text-yellow-500 hover:underline'>Previous issue</p>
           </Link>}

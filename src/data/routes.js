@@ -1,7 +1,7 @@
 const routes = [
     {
       homepage: true,
-      label: "Landing Page",
+      label: "IBG",
       path: '/',
     },
     {

@@ -4,7 +4,8 @@ import Main from '../layouts/Main';
 
 const NotFound = () => (
   <Main
-    description={'Not found'}
+    title="Error 404"
+    description="Not found"
   >
     <section className='min-h-[calc(100vh_-_8rem)] flex justify-center items-center'>
       <div className='w-96 h-64 p-6'>

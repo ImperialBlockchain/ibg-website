@@ -4,7 +4,8 @@ import Main from '../layouts/Main';
 
 const Partners = () => (
   <Main
-    description={'Partner Page'}
+    title="Partners"
+    description="Page for sponsors and other partners"
   >
   </Main>
 );
