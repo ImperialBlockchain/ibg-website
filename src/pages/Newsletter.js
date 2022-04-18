@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Link, useParams, useLocation } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import remarkHeading from 'remark-heading-id';
+import rehypeRaw from 'rehype-raw';
+import rehypeSanitize, { defaultSchema } from 'rehype-sanitize';
 import Main from '../layouts/Main';
 import newsletter from '../data/newsletter/newsletter';
 
@@ -29,6 +32,8 @@ const Newsletter = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
+  // node_modules\hast-util-sanitize\lib\schema.js contains default schema for remark-sanitize
+
   return (
     <Main
       title="Newsletter"
@@ -37,8 +42,10 @@ const Newsletter = () => {
       <div className='px-4 lg:px-20 py-2'>
         <ReactMarkdown
           children={markdown}
-          remarkPlugins={[remarkGfm]}
-          escapeHtml={false}
+          remarkPlugins={[remarkGfm, remarkHeading]}
+          rehypePlugins={[rehypeRaw, [rehypeSanitize, {
+            ...defaultSchema, tagNames: [...defaultSchema.tagNames, 'u'], clobber: [],
+          }]]}
           className='markdown' />
         <br />
         <p className='font-bold'>All issues</p>
@@ -46,7 +53,7 @@ const Newsletter = () => {
           {newsletter.map((s) => (
             s.issue === parseInt(id)
               ? <Link className='px-4 py-2 font-bold bg-yellow-300 hover:bg-yellow-500 hover:text-white' key={s.issue} to={`/newsletter/${s.issue}`}><p>{s.issue}</p></Link>
-              : <Link className='px-4 py-2 bg-yellow-100 hover:bg-yellow-500 hover:text-white' to={`/newsletter/${s.issue}`}><p>{s.issue}</p></Link>
+              : <Link className='px-4 py-2 bg-yellow-100 hover:bg-yellow-500 hover:text-white' key={s.issue} to={`/newsletter/${s.issue}`}><p>{s.issue}</p></Link>
           ))}
         </div>
         <div className='flex-wrap'>

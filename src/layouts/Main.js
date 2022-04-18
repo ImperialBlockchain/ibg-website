@@ -1,10 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowAltCircleUp } from '@fortawesome/free-regular-svg-icons/faArrowAltCircleUp';
 import Navigation from '../components/Template/Navigation';
 import Footer from '../components/Template/Footer'
 import SideBar from '../components/Template/SideBar';
+
+const scrollUp = () => {
+  window.scrollTo(0, 0);
+}
 
 const Main = (props) => (
   <HelmetProvider>
@@ -39,6 +44,7 @@ const Main = (props) => (
         {props.children}
       </div>
       {props.fullPage ? null : <SideBar />}
+      <button className='fixed bottom-2 right-4 text-2xl hover:text-rose-600' aria-label='scroll up' onClick={scrollUp}><FontAwesomeIcon icon={faArrowAltCircleUp} /></button>
       <Footer />
     </div>
   </HelmetProvider>
