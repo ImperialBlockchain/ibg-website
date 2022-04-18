@@ -40,6 +40,7 @@ const Newsletter = () => {
       description="Page with all previous issues of the weekly newsletter"
     >
       <div className='px-4 lg:px-20 py-2'>
+        <p><a href='#all-issues' className='transition-all bg-gradient-to-r from-blue-600 to-blue-600 bg-left-bottom bg-[length:0_0.15rem] bg-no-repeat hover:bg-[length:100%_0.15rem]'>Read all issues</a></p>
         <ReactMarkdown
           children={markdown}
           remarkPlugins={[remarkGfm, remarkHeading]}
@@ -48,7 +49,7 @@ const Newsletter = () => {
           }]]}
           className='markdown' />
         <br />
-        <p className='font-bold'>All issues</p>
+        <p id='all-issues' className='font-bold'>All issues</p>
         <div className='flex'>
           {newsletter.map((s) => (
             s.issue === parseInt(id)

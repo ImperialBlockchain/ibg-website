@@ -150,7 +150,7 @@
     @apply font-bold;
   }
   .markdown > h1 {
-    @apply text-4xl font-normal mt-4;
+    @apply text-4xl font-normal my-2;
     font-family: "soleto", sans-serif;
   }
   .markdown > h2 {
