@@ -44,7 +44,7 @@ const Main = (props) => (
         {props.children}
       </div>
       {props.fullPage ? null : <SideBar />}
-      <button className='fixed bottom-0 right-2 p-2 text-2xl hover:text-rose-600' aria-label='scroll up' onClick={scrollUp}><FontAwesomeIcon icon={faArrowAltCircleUp} /></button>
+      <button className='fixed bottom-0 right-2 p-2 text-3xl hover:text-rose-600' aria-label='scroll up' onClick={scrollUp}><FontAwesomeIcon icon={faArrowAltCircleUp} /></button>
       <Footer />
     </div>
   </HelmetProvider>

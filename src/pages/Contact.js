@@ -4,6 +4,7 @@ import remarkGfm from 'remark-gfm';
 import { useForm } from 'react-hook-form';
 import Main from '../layouts/Main';
 import raw from 'raw.macro';
+import ContactIcons from '../components/Contact/ContactIcons';
 
 const markdown = raw('../data/contact-page.md');
 
@@ -29,6 +30,7 @@ const Contact = () => {
               escapeHtml={false}
               remarkPlugins={[remarkGfm]}
               className='markdown' />
+            <ContactIcons />
           </div>
           <div className='w-full sm:w-1/2 py-2'>
             <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col'>
