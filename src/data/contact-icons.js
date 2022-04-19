@@ -2,10 +2,16 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons/faEnvelope';
+import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 // See https://fontawesome.com/icons?d=gallery&s=brands,regular&m=free
 // to add other icons.
 
 const data = [
+  {
+    link: 'https://www.youtube.com/channel/UCOcaFvUxbuQwKxhqoHKwREg',
+    label: 'Youtube',
+    icon: faYoutube,
+  },
   {
     link: 'https://www.instagram.com/blockchain_ic/',
     label: 'Instagram',

@@ -19,8 +19,8 @@ const Signup = () => {
       title="Signup"
       description="Signup form for Imperial Blockchain Group"
     >
-      <section className='min-h-[calc(100vh_-_10rem)] px-4 lg:px-20 py-2'>
-        <h1 className='text-4xl mt-4'>Signup</h1>
+      <section className='min-h-[calc(100vh_-_8rem)] px-4 lg:px-20 py-2'>
+        <h1 className='text-4xl mt-4 text-yellow-500'>Signup</h1>
         <div className='flex flex-col sm:flex-row divide-y-2 sm:divide-y-0 divide-gray-300'>
           <div className='w-full sm:w-1/2 py-2'>
             <ReactMarkdown children={markdown} escapeHtml={false} className='markdown' />
@@ -30,21 +30,21 @@ const Signup = () => {
               <div className='flex flex-col mb-4'>
                 <label htmlFor='firstName' className='mb-1'><span>Firstname:</span></label>
                 <input {...register('firstName', { required: true })}
-                  className='contact-form py-1 px-2'
+                  className='contact-form py-1 px-2 bg-slate-500/50'
                   placeholder='John' />
                 {errors.firstName && <p className='italic text-red-500'>First name is required.</p>}
               </div>
               <div className='flex flex-col mb-4'>
                 <label htmlFor='lastName' className='mb-1'><span>Lastname:</span></label>
                 <input {...register('lastName', { required: true })}
-                  className='contact-form py-1 px-2'
+                  className='contact-form py-1 px-2 bg-slate-500/50'
                   placeholder='Doe' />
                 {errors.lastName && <p className='italic text-red-500'>Last name is required.</p>}
               </div>
               <div className='flex flex-col mb-4'>
                 <label htmlFor='email' className='mb-1'><span>Email:</span></label>
                 <input {...register('email', { required: true, pattern: /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/ })}
-                  className='contact-form py-1 px-2'
+                  className='contact-form py-1 px-2 bg-slate-500/50'
                   placeholder='john.doe@ymail.com' />
                 {errors.email && <p className='italic text-red-500'>Enter a valid email</p>}
               </div>

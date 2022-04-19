@@ -38,7 +38,7 @@ const Main = (props) => (
       }
 
     </Helmet>
-    <div>
+    <div className='bg-slate-800 text-slate-100 min-h-screen'>
       <Navigation />
       <div>
         {props.children}

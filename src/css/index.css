@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url(hamburger.css);
-
 @font-face {
   font-family: "soleto";
   src: url("https://use.typekit.net/af/58f133/00000000000000007735a47b/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
@@ -147,7 +145,7 @@
   .markdown > h4,
   .markdown > h5,
   .markdown > h6 {
-    @apply font-bold;
+    @apply font-bold text-yellow-500;
   }
   .markdown > h1 {
     @apply text-4xl font-normal my-2;
@@ -157,7 +155,7 @@
     @apply text-xl;
   }
   .markdown a {
-    @apply hover:text-blue-600 underline;
+    @apply hover:text-blue-500 underline;
   }
   .markdown > p,
   .markdown > h1,
@@ -183,7 +181,7 @@
     @apply list-disc list-inside;
   }
   .markdown sup > a {
-    @apply text-blue-600 no-underline;
+    @apply text-blue-500 hover:text-rose-600 no-underline;
   }
   .markdown > table {
     @apply text-left mb-2;
@@ -193,10 +191,10 @@
     @apply py-1 px-2;
   }
   .markdown > table > thead > tr {
-    @apply bg-rose-600 text-white font-bold italic;
+    @apply bg-rose-600 text-slate-100 font-bold italic;
   }
   .markdown > table > tbody > tr {
-    @apply even:bg-gray-100 last:border-b-2 border-rose-600 hover:bg-yellow-100;
+    @apply even:bg-gray-100/20 odd:bg-gray-900/50 last:border-b-2 border-rose-600 hover:bg-yellow-100/20;
   }
   .markdown > table > tbody > tr > td {
     @apply first:font-bold;
@@ -218,13 +216,24 @@
 
 @layer components {
   a.text-link {
-    @apply hover:text-blue-600 underline;
+    @apply hover:text-blue-500 underline;
   }
   input.contact-form,
   textarea.contact-form {
-    @apply border-b-2 border-black;
+    @apply border-b-2 border-slate-900;
   }
   .primary-button {
-    @apply text-white bg-rose-600 hover:hover:bg-yellow-500;
+    @apply text-slate-100 bg-rose-600 hover:hover:bg-yellow-500;
   }
 }
+
+  /* Burger menu */
+  .bm-menu-wrap {
+    @apply bg-slate-800;
+  }
+  .bm-item {
+    @apply ml-4;
+  }
+  .bm-item > li {
+    @apply p-1;
+  }

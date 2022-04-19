@@ -14,14 +14,14 @@ const Hamburger = (props) => {
   return (
     <div className={props.className}>
       {/*z-index is set to the value to be over the navigation*/} 
-      <nav className='z-[1200] absolute text-yellow-500 p-2 my-2'>
+      <nav className='z-[1200] absolute text-yellow-500'>
         <ul>
           {open ? (
-            <li className="menu close-menu">
+            <li className="menu close-menu p-2 my-4">
               <div onClick={() => setOpen(!open)} className="menu-hover"><FontAwesomeIcon icon={faTimesRectangle} /></div>
             </li>
           ) : (
-            <li className="menu open-menu">
+            <li className="menu open-menu p-2 my-4">
               <div onClick={() => setOpen(!open)} className="menu-hover"><FontAwesomeIcon icon={faBarChart} /></div>
             </li>
           )}
@@ -38,12 +38,12 @@ const Hamburger = (props) => {
           customCrossIcon={false}
           disableAutoFocus
         >
-          <div className='absolute top-16'>
+          <div className='absolute top-16 '>
             <ul>
               {routes.filter((l) => l.navigation || l.homepage || l.login || l.signup).map((l) => (
                 <li key={l.label}>
                   <Link to={l.path} onClick={() => setOpen(!open)}>
-                    <h3 className={`${l.index && 'index-li'} hover:text-blue-600 text-xl`}>{l.label}</h3>
+                    <h3 className={`${l.index && 'index-li'} hover:text-blue-500 hover:underline text-xl`}>{l.label}</h3>
                   </Link>
                 </li>
               ))}
