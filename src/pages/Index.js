@@ -1,5 +1,6 @@
 import React from 'react';
 //import heroVideo from '../assets/Hero_Video.mp4';
+import Hero_Image from '../assets/Hero_Image';
 import Main from '../layouts/Main';
 import events from '../data/events';
 import partners from '../data/partners';
@@ -9,14 +10,16 @@ const Index = () => (
     title="Home"
     description="Blockchain-focused research/consulting/technology group. Analyze, research, create and Inspire."
   >
-    <section className='h-[calc(100vh_-_4rem)]'>
+    <section className='h-[calc(100vh_-_4rem)] relative'>
       {/*<div className='-z-10 invert hue-rotate-90 absolute w-full sm:w-1/2 right-0 top-0'>
         <video className='absolute right-0 top-0' loop={true} muted={true} playsInline={true} autoPlay={true} poster=''>
           <source src={heroVideo} type="video/mp4" />
         </video>
 </div>*/}
+      {/*dot svg from https://clipart.me/backgrounds/dot-wave-background-35074*/}
+      <div className='-z-5 absolute w-full md:w-1/2 right-0 top-0 overflow-clip'><Hero_Image className='h-screen' /></div>
       <div className='h-full grid grid-cols-12 grid-rows-1 content-center px-4 lg:px-20'>
-        <div className='col-start-1 col-end-13 sm:col-end-7 row-start-1 row-end-2 flex flex-col justify-center'>
+        <div className='relative z-5 col-start-1 col-end-13 md:col-end-7 row-start-1 row-end-2 flex flex-col justify-center'>
           <h1 className='text-6xl sm:text-7xl'>Welcome to Imperial Blockchain Group's Website</h1>
           <div className='my-2'>
             <button className='p-2 inline hover:bg-slate-300/50 hover:underline rounded border-2 mr-2'>Newsletter</button>
@@ -25,7 +28,7 @@ const Index = () => (
         </div>
       </div>
     </section>
-    <section className='bg-yellow-500 h-40'>
+    <section className='bg-yellow-500 h-40 relative z-10'>
       Stats go here
     </section>
     <section className='px-4 lg:px-20 py-8'>
