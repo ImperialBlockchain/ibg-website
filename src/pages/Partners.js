@@ -43,7 +43,7 @@ const Partners = () => {
               <ReactMarkdown
                 children={s.desc}
                 className='markdown' />
-              {s.url && <a href={s.url}><p className='primary-button w-fit p-1'>Learn more</p></a>}
+              {s.url && <a href={s.url}><p className='primary-button'>Learn more</p></a>}
             </SwiperSlide>
           ))}
         </Swiper>

@@ -1,5 +1,5 @@
 import * as React from "react"
-const Hero_Image = (props) => (
+const HeroImage = (props) => (
   <svg
     viewBox="0 0 811.24 606.29"
     xmlSpace="preserve"
@@ -981,4 +981,4 @@ const Hero_Image = (props) => (
     </g>
   </svg>
 )
-export default Hero_Image
+export default HeroImage

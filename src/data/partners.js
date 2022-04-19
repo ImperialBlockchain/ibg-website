@@ -99,7 +99,7 @@ vimque vestrae habentia et. Dederat est fratres ruinae.
     name: 'Company C',
     tier: 'Silver',
     imageUrl: '',
-    url: '',
+    url: '/',
     desc: `
 ## Quendam nervosus
 

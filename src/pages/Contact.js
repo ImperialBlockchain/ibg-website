@@ -57,7 +57,7 @@ const Contact = () => {
                 {errors.message && <p className='italic text-red-500'>Enter a message</p>}
               </div>
               <div className='w-full'>
-                <input value='Submit' type="submit" className='primary-button w-48 p-1 mx-auto block' />
+                <input value='Submit' type="submit" className='primary-button mx-auto block' />
               </div>
             </form>
           </div>
