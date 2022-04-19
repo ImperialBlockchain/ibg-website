@@ -9,23 +9,23 @@ Come to our first event to give you a taste of what is to come. Our guests, care
 
 ## Table of Contents
 
-[Information Technology](#IT)
+- [Information Technology](#IT)
 
-[Rates](#rates)
+- [Rates](#rates)
 
-[Investing in Pocket Network](#investing)
+- [Investing in Pocket Network](#investing)
 
-[Real Estate](#estate)
+- [Real Estate](#estate)
 
-[Sustainable Investing - Market Summary](#sustainable)
+- [Sustainable Investing - Market Summary](#sustainable)
 
-[Latest Surge in NFT Markets](#nft)
+- [Latest Surge in NFT Markets](#nft)
 
-[Is Bitcoin Working in EL Salvador?](#bitcoin)
+- [Is Bitcoin Working in EL Salvador?](#bitcoin)
 
-[Markets Overview](#markets)
+- [Markets Overview](#markets)
 
-[Crypto Markets This Week](#crypto)
+- [Crypto Markets This Week](#crypto)
 
 ## Financials Review 
 

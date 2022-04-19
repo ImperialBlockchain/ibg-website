@@ -156,18 +156,21 @@
   .markdown > h2 {
     @apply text-xl;
   }
-  .markdown > p a {
+  .markdown a {
     @apply hover:text-blue-600 underline;
   }
   .markdown > p,
   .markdown > h1,
-  .markdown > h2 {
+  .markdown > h2,
+  .markdown > ul,
+  .markdown > ol {
     @apply mb-2;
   }
   .markdown > ol {
     @apply list-decimal list-inside;
   }
-  .markdown > ol > li > p {
+  .markdown > ol > li > p,
+  .markdown > ul > li > p {
     @apply inline;
   }
   .markdown > .footnotes > ol {

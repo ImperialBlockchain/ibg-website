@@ -15,7 +15,7 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 function App() {
   return (
     <BrowserRouter basename={PUBLIC_URL}>
-      <Suspense fallback={<Main />}>
+      <Suspense fallback={<Main>Loading...</Main>}>
         <Routes>
           <Route exact path="/" element={<Index />} />
           <Route path="/team" element={<Team />} />
