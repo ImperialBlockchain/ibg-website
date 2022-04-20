@@ -17,10 +17,10 @@ const Index = () => (
         </video>
 </div>*/}
       {/*dot svg from https://clipart.me/backgrounds/dot-wave-background-35074*/}
-      <div className='-z-5 absolute w-full md:w-1/2 right-0 top-0 overflow-clip'><HeroImage className='h-screen' /></div>
+      <div className='-z-5 absolute w-full md:w-1/2 right-0 top-0 overflow-clip'><HeroImage className='h-screen ml-auto' /></div>
       <div className='h-full grid grid-cols-12 grid-rows-1 content-center px-4 lg:px-20'>
         <div className='relative z-5 col-start-1 col-end-13 md:col-end-7 row-start-1 row-end-2 flex flex-col justify-center'>
-          <h1 className='text-6xl sm:text-7xl'>Welcome to Imperial Blockchain Group's Website</h1>
+          <h1 className='text-5xl md:text-6xl lg:text-7xl'>Welcome to Imperial Blockchain Group's Website</h1>
           <div className='my-4'>
             <a href='/newsletter' className='inline'><span className='p-2 inline hover:bg-slate-300/50 hover:underline rounded border-2 mr-2'>Newsletter</span></a>
             <a href='#events' className='inline'><span className='p-2 inline hover:bg-slate-300/50 hover:underline rounded border-2'>Events</span></a>
