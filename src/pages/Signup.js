@@ -49,7 +49,7 @@ const Signup = () => {
                 {errors.email && <p className='italic text-red-500'>Enter a valid email</p>}
               </div>
               <div className='flex mb-4 items-center'>
-                <input type='checkbox' {...register('newsletterSub')} className='mr-2 w-4' />
+                <input type='checkbox' {...register('newsletterSub')} className='mr-2 w-4 h-4 bg-rose-600' />
                 <label htmlFor='newsletterSub'><p>Subscribe to IBG weekly newsletter</p></label>
               </div>
               <div className='w-full'>

@@ -40,7 +40,7 @@ const Main = (props) => (
     </Helmet>
     <div className='bg-slate-800 text-slate-100 min-h-screen'>
       <Navigation />
-      <div>
+      <div className='pt-[4.5rem]'>
         {props.children}
       </div>
       {props.fullPage ? null : <SideBar />}

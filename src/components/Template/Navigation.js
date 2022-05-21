@@ -6,7 +6,7 @@ import routes from '../../data/routes';
 
 // Websites Navbar, displays routes defined in 'src/data/routes'
 const Navigation = () => (
-  <header className='w-full from-gray-100/30 to-gray-100/10 bg-gradient-to-r'>
+  <header className='fixed z-30 w-full bg-gradient-to-r from-gray-500 to-gray-700 opacity-95'>
     <div className='flex flex-wrap px-4 lg:px-20 mx-auto flex-row justify-between'>
       {routes.filter((l) => l.homepage).map((l) => (
         <div className='w-3/5 my-4 text-2xl' key={l.label}>

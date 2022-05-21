@@ -220,7 +220,7 @@
   }
   input.contact-form,
   textarea.contact-form {
-    @apply border-b-2 border-slate-900;
+    @apply border-b-2 border-slate-900 focus:bg-gradient-to-l hover:bg-gradient-to-l from-slate-500;
   }
   .primary-button {
     @apply text-slate-100 bg-rose-600 hover:hover:bg-yellow-500 w-fit p-1 px-2;
