@@ -36,7 +36,7 @@ const Partners = () => {
           className='my-4'
         >
           {partners.map((s, i) => (
-            <SwiperSlide key={s.name} virtualIndex={i}>
+            <SwiperSlide key={s.name} className="px-16" virtualIndex={i}>
               <h2 className='font-bold text-yellow-500 text-xl'>{s.name}</h2>
               Tier: {s.tier}
               <img src={s.imageUrl} alt={s.name} className='w-full sm:w-3/4 md:w-1/2 bg-slate-500' />

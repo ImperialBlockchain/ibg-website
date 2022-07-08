@@ -10,7 +10,7 @@ const Index = () => (
     title="Home"
     description="Blockchain-focused research/consulting/technology group. Analyze, research, create and Inspire."
   >
-    <section className='h-[calc(100vh_-_4rem)] relative'>
+    <section className='h-[calc(100vh_-_4.5rem)] relative'>
       {/*<div className='-z-10 invert hue-rotate-90 absolute w-full sm:w-1/2 right-0 top-0'>
         <video className='absolute right-0 top-0' loop={true} muted={true} playsInline={true} autoPlay={true} poster=''>
           <source src={heroVideo} type="video/mp4" />
@@ -21,15 +21,16 @@ const Index = () => (
       <div className='h-full grid grid-cols-12 grid-rows-1 content-center px-4 lg:px-20'>
         <div className='relative z-5 col-start-1 col-end-13 md:col-end-7 row-start-1 row-end-2 flex flex-col justify-center'>
           <h1 className='text-5xl md:text-6xl lg:text-7xl'>Welcome to Imperial Blockchain Group's Website</h1>
-          <div className='my-4'>
-            <a href='/newsletter' className='inline'><span className='p-2 inline hover:bg-slate-300/50 hover:underline rounded border-2 mr-2'>Newsletter</span></a>
+          <div className='my-4 flex gap-2'>
+            <a href='/newsletter' className='inline'><span className='p-2 inline hover:bg-slate-300/50 hover:underline rounded border-2'>Newsletter</span></a>
             <a href='#events' className='inline'><span className='p-2 inline hover:bg-slate-300/50 hover:underline rounded border-2'>Events</span></a>
+            <a href='https://www.imperialcollegeunion.org/csp/1314' className='inline'><span className='p-2 inline bg-yellow-500 hover:bg-slate-800 hover:underline rounded border-2'>Sign Up</span></a>
           </div>
         </div>
       </div>
     </section>
-    <section className='bg-yellow-500 h-40 relative z-10'>
-      Stats go here
+    <section className='bg-yellow-500 px-8 py-4 min-h-[10rem] relative z-10 flex items-center justify-center'>
+      <span className='md:w-5/6 text-2xl'>Imperial College London affiliated Blockchain group, offering services in protocol research reports, blockchain rating reports, blockchain consulting, and smart contract creations.</span>
     </section>
     <section className='px-4 lg:px-20 py-8'>
       <h2 className='text-xl font-bold text-yellow-500' id='events'>Events</h2>
